@@ -1,0 +1,91 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.hero-section {
+  margin-top: 13rem;
+  display: flex;
+  background-color: rgb(244, 243, 243);
+  padding-inline: 3rem;
+  box-shadow: 2px 2px 2px 2px rgb(191, 187, 187);
+  overflow: hidden;
+}
+
+.left {
+  width: 50%;
+  text-align: left;
+  padding: 20px;
+}
+
+.left h1 {
+  margin-top: 3rem;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.left h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.left p {
+  font-size: 1rem;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.left .btn {
+  width: 8rem;
+  height: 3rem;
+  color: white;
+  background-color: #001f54;
+}
+
+.right {
+  width: 50%;
+  padding: 10px;
+}
+
+.down {
+  width: 26.5rem;
+  padding: 20px;
+  background-color: #034078;
+}
+
+.back {
+  width: 24rem;
+  background-color: #001f54;
+}
+
+.image-area img {
+  width: 25rem;
+  height: 20rem;
+}
+
+.bubble {
+  height: 6rem;
+  width: 6rem;
+  margin-top: 5rem;
+  margin-right: -10rem;
+  opacity: 1;
+  border-radius: 50%;
+  background-color: #034078;
+}
+
+.bubbs {
+  height: 3rem;
+  width: 3rem;
+  margin-top: 12rem;
+  margin-right: -10rem;
+  opacity: 1;
+  border-radius: 50%;
+  background-color: #034078;
+}
+
+@media screen and (max-width: 740px) {
+  .hero-section{
+    margin-top: 11rem;
+  }
+}
