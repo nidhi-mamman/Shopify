@@ -5,8 +5,11 @@
 }
 
 .hero-section {
+  width: auto;
+  padding-inline: 1rem;
   margin-top: 13rem;
   display: flex;
+  align-items: center;
   background-color: rgb(244, 243, 243);
   padding-inline: 3rem;
   box-shadow: 2px 2px 2px 2px rgb(191, 187, 187);
@@ -44,10 +47,18 @@
 }
 
 .right {
-  width: 50%;
-  padding: 10px;
+  flex: 1;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
+.right img {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  border-radius: 8px;
+}
 .down {
   width: 26.5rem;
   padding: 20px;
@@ -85,16 +96,17 @@
 }
 
 @media screen and (max-width: 740px) {
-  .hero-section{
+  .hero-section {
     padding-inline: 0rem;
     display: flex;
     align-items: center;
     margin-top: 8rem;
   }
-  .left{
+  .left {
     display: none;
   }
-  .bubble,.bubbs{
+  .bubble,
+  .bubbs {
     display: none;
   }
 }
