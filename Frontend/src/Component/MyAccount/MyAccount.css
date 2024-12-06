@@ -180,20 +180,11 @@ button:active {
   transform: translatex(0);
 }
 
-.mobile-container {
-  display: none;
-}
-
 @media screen and (max-width: 740px) {
-  .container {
-    display: none;
-  }
-  .mobile-container {
-    display: block;
-  }
   .container-fluid {
     position: relative;
-    top: 10rem;
+    padding: 0px;
+    top: 0rem;
     display: flex;
     justify-content: center;
     align-items: center;

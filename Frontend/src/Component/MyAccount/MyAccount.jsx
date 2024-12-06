@@ -89,9 +89,6 @@ const MyAccount = () => {
                     </div>
                 </div>
             </div>
-            <div className="mobile-con">
-                
-            </div>
         </>
     )
 }
