@@ -46,3 +46,14 @@
 .prods h3 {
   font-weight: 500;
 }
+
+@media screen and (max-width:740px){
+  .prods {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .prods h1 {
+    font-size: 14px;
+  }
+}

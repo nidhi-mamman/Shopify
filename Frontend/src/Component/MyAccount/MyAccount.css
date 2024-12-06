@@ -194,6 +194,7 @@ button:active {
     flex-direction: column;
   }
   .account-txt {
+    line-height: 14px;
     display: initial;
   }
   .container-fluid::before {

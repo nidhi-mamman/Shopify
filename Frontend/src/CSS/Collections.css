@@ -22,10 +22,10 @@
 .card div {
   width: 15rem;
   background: white;
-  border: 1px solid #ccc; 
+  border: 1px solid #ccc;
   border-radius: 5px;
   text-align: center;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .card div .descript {
@@ -51,4 +51,26 @@
 }
 .card h3 {
   font-weight: 500;
+}
+
+@media screen and (max-width: 740px) {
+  .card {
+    display: grid;
+    padding-inline:0rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .card div {
+    width: 8rem;
+  }
+
+  .card img {
+    width: 10rem;
+    height: 10rem;
+  }
+  .addToCart {
+    width: 6rem;
+    height: 3rem;
+    margin-bottom: 0rem;
+  }
+  
 }
