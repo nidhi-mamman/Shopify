@@ -1,6 +1,7 @@
-
 .container {
-  height: 30rem;
+  position: relative;
+  top: 15rem;
+  min-height: 18rem;
   padding: 2rem;
   display: flex;
   justify-content: center;
@@ -11,14 +12,16 @@
 
 .container-fluid {
   padding: 20px;
-  height: 22rem;
+  min-height: 10rem;
   width: 80%;
   display: flex;
+  flex:1;
   justify-content: space-between;
   align-items: center;
   overflow: hidden;
   background: #fff;
   position: absolute;
+  margin-bottom: 5rem;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
@@ -177,14 +180,26 @@ button:active {
   transform: translatex(0);
 }
 
-@media screen and (max-width: 800px) {
+.mobile-container {
+  display: none;
+}
+
+@media screen and (max-width: 740px) {
+  .container {
+    display: none;
+  }
+  .mobile-container {
+    display: block;
+  }
   .container-fluid {
+    position: relative;
+    top: 10rem;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
   }
-  .account-txt{
+  .account-txt {
     display: initial;
   }
   .container-fluid::before {
@@ -205,5 +220,9 @@ button:active {
   }
   .overlay-container {
     display: none;
+  }
+  .signin,
+  .signup {
+    width: 80%;
   }
 }

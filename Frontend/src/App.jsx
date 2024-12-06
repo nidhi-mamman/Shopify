@@ -18,29 +18,32 @@ import OrderPlaced from './Pages/OrderPlaced.jsx'
 import MyAccount from './Component/MyAccount/MyAccount.jsx';
 
 function App() {
-
   return (
     <>
       <BrowserRouter>
         <ContextProvider>
-          <Header />
-          <Navbar />
-          <Routes>
-            <Route path='/' element={<Home banner={hero} exact />} />
-            <Route path="*" element={<Navigate to="/" replace />} />
-            <Route path='/men' element={<Men banner={mens_banner} />} />
-            <Route path='/women' element={<Women banner={women_banner} />} />
-            <Route path='/kids' element={<Kids banner={kids_banner} />} />
-            <Route path='/cart' element={<Cart />} />
-            <Route path='/search' element={<SearchResults />} />
-            <Route path='/order' element={<OrderPlaced/>} />
-            <Route path='/myAcc' element={<MyAccount/>} />
-          </Routes>
-          <Footer />
+          <div className="app-layout">
+            <Header />
+            <Navbar />
+            <div className="app-content">
+              <Routes>
+                <Route path="/" element={<Home banner={hero} />} />
+                <Route path="*" element={<Navigate to="/" replace />} />
+                <Route path="/men" element={<Men banner={mens_banner} />} />
+                <Route path="/women" element={<Women banner={women_banner} />} />
+                <Route path="/kids" element={<Kids banner={kids_banner} />} />
+                <Route path="/cart" element={<Cart />} />
+                <Route path="/search" element={<SearchResults />} />
+                <Route path="/order" element={<OrderPlaced />} />
+                <Route path="/myAcc" element={<MyAccount />} />
+              </Routes>
+            </div>
+            <Footer />
+          </div>
         </ContextProvider>
       </BrowserRouter>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

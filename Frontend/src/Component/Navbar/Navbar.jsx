@@ -49,7 +49,7 @@ const Navbar = () => {
                         </div>
                     </li>
                     <li>
-                        <div className="flex items-center w-28">
+                        <div className="flex items-center justify-center">
                             <NavLink to='/cart'> <div className=" text-black border-none p-1">
                                 <BsCart4 size={28} />
                             </div></NavLink>
@@ -91,13 +91,14 @@ const Navbar = () => {
                     <li className='cursor-pointer flex gap-4 items-center justify-center' onClick={() => { setShowSubmenu(!showSubmenu) }}>Categories <IoIosArrowDown /></li>
                     <div className={`sub-menu ${showSubmenu ? "show" : "hide"}`}>
                         <ul>
-                            <Link to='/men'><li>Men</li></Link>
-                            <Link to='/women'><li>Women</li></Link>
-                            <Link to='/kids'><li>Kids</li></Link>
+                            <li><Link to='/men'>Men</Link></li>
+                            <li><Link to='/women'>Women</Link></li>
+                            <li><Link to='/kids'>Kids</Link></li>
                         </ul>
                     </div>
                     <li>FAQ</li>
                     <li>Contact</li>
+                    <li><Link to='/myAcc'><button className="bg-blue-950 text-white p-2">Login</button></Link></li>
                 </ul>
             </div>
         </>

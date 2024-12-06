@@ -5,7 +5,10 @@
 }
 
 .footer{
+    z-index: 10;
+    bottom: 0;
     padding: 1rem;
+    width: 100%;
     color: white;
     background: #001f54;
 }
