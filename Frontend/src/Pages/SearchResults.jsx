@@ -13,10 +13,12 @@ const SearchResults = () => {
                     searchResults.map((product) => (
                         <div key={product.id}>
                             <img src={product.image} alt={product.title} />
-                            <h3>{product.title}</h3>
-                            <p>Price: {product.price}</p>
-                            <p>Vendor: {product.vendor}</p>
-                            <button className="btn">Add To Cart</button>
+                            <div className="descript">
+                                <h3>{product.title}</h3>
+                                <p>Price: {product.price}</p>
+                                <p>Vendor: {product.vendor}</p>
+                                <button className="btn">Add To Cart</button>
+                            </div>
                         </div>
                     ))
                 ) : (
