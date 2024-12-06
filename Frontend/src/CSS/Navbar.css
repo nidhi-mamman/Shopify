@@ -147,9 +147,10 @@
     padding-inline: 0rem;
   }
   .nav-bar ul {
+    gap: 2rem;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
   }
 
   .nav-items {
