@@ -4,8 +4,9 @@
   box-sizing: border-box;
 }
 
-.cartitems{
-    padding-inline: 2rem;
+.cartitems {
+  margin-top: 13rem;
+  padding-inline: 2rem;
 }
 
 .cartitems-format-main {
@@ -13,19 +14,26 @@
   place-items: center;
   font-weight: 600;
   font-size: 20px;
-  grid-template-columns: repeat(7, 1fr);
+  grid-template-columns: repeat(6, 1fr);
 }
 
 .cartitems-card {
   display: grid;
-  padding-block: 0.5rem;
+  padding-block: 1rem;
   place-items: center;
-  grid-template-columns: repeat(7, 1fr);
+  grid-template-columns: repeat(6, 1fr);
 }
 
 .cartitems-card img {
   width: 8rem;
   height: 8rem;
+}
+
+.quantity {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
 }
 
 .totalCartAmount {
@@ -59,4 +67,34 @@
 
 .thankyou {
   height: 80vh;
+}
+@media screen and (max-width: 740px) {
+  .cartitems {
+    margin-top: 8rem;
+    padding-inline: 0rem;
+  }
+  .cartitems-format-main {
+    display: grid;
+    gap: 1rem;
+    place-items: center;
+    font-size: 12px;
+    grid-template-columns: repeat(6, 1fr);
+  }
+  .cartitems-card {
+    display: grid;
+    text-align: center;
+    place-items: center;
+    grid-template-columns: repeat(6, 1fr);
+  }
+  .cartitems-card p{
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    font-weight: 600;
+  }
+  .cartitems-card img {
+    width: 4rem;
+    height: 4rem;
+  }
+
 }

@@ -28,13 +28,13 @@ const CartItems = () => {
                     <div key={category.category_name}>
                         <div className="cartitems-format">
                             {category.category_products.map((product) => {
-                                if (cartItems[product.id] > 0) { // Check if the product is in the cart
+                                if (cartItems[product.id] > 0) { 
                                     return (<>
                                         <div key={product.id} className="cartitems-card">
                                             <img src={product.image} alt={product.title} />
                                             <p>{product.title}</p>
                                             <p>${product.price}</p>
-                                            <div className='flex items-center gap-4'>
+                                            <div className='quantity'>
                                                 <FaPlus className='border-1 border-gray-600 cursor-pointer' onClick={() => { addToCart(product.id) }} />
                                                 <p>{cartItems[product.id]}</p>
                                                 <FaMinus className='cursor-pointer' size={18} onClick={() => { removeFromCart(product.id) }} />
