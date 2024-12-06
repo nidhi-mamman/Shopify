@@ -51,6 +51,15 @@
   color: white;
 }
 
+.cart-total {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-top: 1.25rem;
+}
+
 .subtotal,
 .shipping,
 .total-cartitem {
@@ -71,7 +80,7 @@
 @media screen and (max-width: 740px) {
   .cartitems {
     margin-top: 8rem;
-    padding-inline: 0rem;
+    padding-inline: 0.3rem;
   }
   .cartitems-format-main {
     display: grid;
@@ -86,7 +95,7 @@
     place-items: center;
     grid-template-columns: repeat(6, 1fr);
   }
-  .cartitems-card p{
+  .cartitems-card p {
     display: flex;
     align-items: center;
     font-size: 12px;
@@ -97,4 +106,14 @@
     height: 4rem;
   }
 
+  .totalCartAmount {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  .cart-total {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-top: 1.25rem;
+  }
 }
