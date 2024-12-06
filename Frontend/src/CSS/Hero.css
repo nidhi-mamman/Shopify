@@ -86,6 +86,15 @@
 
 @media screen and (max-width: 740px) {
   .hero-section{
-    margin-top: 11rem;
+    padding-inline: 0rem;
+    display: flex;
+    align-items: center;
+    margin-top: 8rem;
+  }
+  .left{
+    display: none;
+  }
+  .bubble,.bubbs{
+    display: none;
   }
 }
