@@ -148,7 +148,7 @@
   .nav-bar ul {
     display: flex;
     align-items: center;
-    padding-inline:1.5rem;
+    padding-inline:1rem;
     justify-content: space-between;
   }
 
