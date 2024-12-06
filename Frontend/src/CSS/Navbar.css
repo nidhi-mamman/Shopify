@@ -144,11 +144,12 @@
 @media screen and (max-width: 740px) {
   .nav-bar {
     top: 0rem;
+    padding-inline: 1.2rem;
   }
   .nav-bar ul {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
   }
 
   .nav-items {
