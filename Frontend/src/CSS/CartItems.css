@@ -11,6 +11,7 @@
 
 .cartitems-format-main {
   display: grid;
+  margin-top: 1rem;
   place-items: center;
   font-weight: 600;
   font-size: 20px;
