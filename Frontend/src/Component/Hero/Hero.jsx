@@ -4,7 +4,7 @@ import '../../CSS/Hero.css'
 const Hero = (props) => {
     return (
         <>
-            {/* <div className="hero-section">
+            <div className="hero-section">
                 <div className="left">
                     <h1>STYLES NEVER</h1>
                     <h2>GROW OLD</h2>
@@ -24,7 +24,7 @@ const Hero = (props) => {
                 </div>
                 <div className="bubble"></div>
                 <div className='bubbs'></div>
-            </div> */}
+            </div>
             <div className="mobile-hero-section">
                 <div className="left-mobile">
                     <div className='flex items-center justify-center font-bold text-xl'> 

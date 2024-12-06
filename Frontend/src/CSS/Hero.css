@@ -86,11 +86,12 @@
 }
 
 .mobile-hero-section {
+  display: none;
   margin-top: 8.1rem;
-  max-height:30rem;
+  max-height: 30rem;
   box-shadow: 2px 2px 2px 2px rgb(191, 187, 187);
 }
-.mobile-hero-section p{
+.mobile-hero-section p {
   font-size: 12px;
   margin: 1rem;
 }
@@ -103,7 +104,7 @@
   background-color: #001f54;
 }
 
-.right-mobile{
+.right-mobile {
   padding: 1rem;
   background-color: #034078;
 }
@@ -113,11 +114,11 @@
 }
 
 @media screen and (max-width: 740px) {
+  .mobile-hero-section {
+    display: block;
+  }
   .hero-section {
-    padding-inline: 0rem;
-    display: flex;
-    align-items: center;
-    margin-top: 8rem;
+    display: none;
   }
   .left {
     display: none;
