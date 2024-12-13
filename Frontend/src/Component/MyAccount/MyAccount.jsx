@@ -12,6 +12,7 @@ const MyAccount = () => {
     const [signupMode, setsignupMode] = useState(false)
     const [signupMode2, setsignupMode2] = useState(false)
     const [isVisible, setisVisible] = useState(false)
+    const [ispassVisible, setispassVisible] = useState(false)
     const { BASE_URL, setToken } = useContext(shopContext)
     const containerRef = useRef(null)
     const navigate = useNavigate()
@@ -126,7 +127,7 @@ const MyAccount = () => {
                             <p>or use your account</p>
                             <input type="email" name='email' placeholder="Email" required />
                             <div className="secure">
-                                <input type={`${isVisible?'text':'password'}`} name='password' placeholder="Password" className='passw' required />
+                                <input type={`${isVisible ? 'text' : 'password'}`} name='password' placeholder="Password" className='passw' required />
                                 {
                                     isVisible ?
                                         <img src={eye} className='eye cursor-pointer' alt="Eye Open" width={25} height={20} onClick={() => setisVisible(!isVisible)} />
@@ -146,7 +147,16 @@ const MyAccount = () => {
                             <p>or use your email for registration</p>
                             <input type="text" name="name" placeholder="Name" required />
                             <input type="email" name="email" placeholder="Email" required />
-                            <input type="password" name="password" placeholder="Password" required />
+                            <div className="secure">
+                                <input type={`${ispassVisible ? 'text' : 'password'}`} name='password' placeholder="Password" className='passw' required />
+                                {
+                                    ispassVisible ?
+                                        <img src={eye} className='eye cursor-pointer' alt="Eye Open" width={25} height={20} onClick={() => setispassVisible(!ispassVisible)} />
+                                        :
+                                        <img src={eyebrow} className='eyeclose cursor-pointer' alt="Eye Close" width={25} height={20} onClick={() => setispassVisible(!ispassVisible)} />
+
+                                }
+                            </div>
                             <p className='account-txt'>Do you already have an account ? <span className='text-blue-600 cursor-pointer' onClick={handleSignInClick2}>Sign in</span></p>
                             <button type='submit'>SIGN UP</button>
                         </form>

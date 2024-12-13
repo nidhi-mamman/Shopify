@@ -213,6 +213,8 @@ button:active {
   }
   .container-fluid.sign-up-mode-2 .signup {
     display: flex;
+    align-items: center;
+    justify-content: center;
     opacity: 1;
   }
   .container-fluid.sign-up-mode-2 .signin {
