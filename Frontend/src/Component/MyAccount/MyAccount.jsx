@@ -127,7 +127,7 @@ const MyAccount = () => {
                             <p>or use your account</p>
                             <input type="email" name='email' placeholder="Email" required />
                             <div className="secure">
-                                <input type={`${isVisible ? 'text' : 'password'}`} name='password' placeholder="Password" className='passw' required />
+                                <input type={`${isVisible ? 'text' : 'password'}`} name='password' placeholder="Password" className='passw' maxLength={12} required />
                                 {
                                     isVisible ?
                                         <img src={eye} className='eye cursor-pointer' alt="Eye Open" width={25} height={20} onClick={() => setisVisible(!isVisible)} />
@@ -148,7 +148,7 @@ const MyAccount = () => {
                             <input type="text" name="name" placeholder="Name" required />
                             <input type="email" name="email" placeholder="Email" required />
                             <div className="secure">
-                                <input type={`${ispassVisible ? 'text' : 'password'}`} name='password' placeholder="Password" className='passw' required />
+                                <input type={`${ispassVisible ? 'text' : 'password'}`} name='password' placeholder="Password" className='passw' maxLength={12} required />
                                 {
                                     ispassVisible ?
                                         <img src={eye} className='eye cursor-pointer' alt="Eye Open" width={25} height={20} onClick={() => setispassVisible(!ispassVisible)} />
