@@ -4,7 +4,7 @@ import './MyAccount.css'
 import { useContext } from 'react'
 import { shopContext } from './../../Context/ContextProvider';
 import { toast } from 'react-toastify';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import eyebrow from '../../assets/eyebrow.png'
 import eye from '../../assets/eye.png'
 
@@ -136,7 +136,7 @@ const MyAccount = () => {
 
                                 }
                             </div>
-                            <p>Forgot your  password?</p>
+                            <p><Link to='/forgetpass'>Forgot your  password?</Link></p>
                             <p className='account-txt'>Do not have account ? <span className='text-blue-600 cursor-pointer' onClick={handleSignUpClick2}>Sign up</span></p>
                             <button>SIGN IN</button>
                         </form>

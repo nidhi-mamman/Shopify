@@ -18,6 +18,8 @@ import { ContextProvider } from './Context/ContextProvider.jsx'
 import OrderPlaced from './Pages/OrderPlaced.jsx'
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import ForgetPassword from './Component/ForgetPassword/ForgetPassword.jsx'
+import OtpInput from './Component/OtpInput/OtpInput.jsx'
 import MyAccount from './Component/MyAccount/MyAccount.jsx';
 
 function App() {
@@ -40,6 +42,8 @@ function App() {
                 <Route path="/order" element={<OrderPlaced />} />
                 <Route path="/myAcc" element={<MyAccount />} />
                 <Route path="/logout" element={<Logout />} />
+                <Route path="/forgetpass" element={<ForgetPassword/>} />
+                <Route path="/otpinput" element={<OtpInput/>} />
               </Routes>
             </div>
             <Footer />

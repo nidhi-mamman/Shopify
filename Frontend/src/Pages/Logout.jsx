@@ -7,7 +7,6 @@ const Logout = () => {
     useEffect(() => {
         LogoutUser()
     }, [LogoutUser])
-    
     return (
         < Navigate to='/myAcc' />
     )
