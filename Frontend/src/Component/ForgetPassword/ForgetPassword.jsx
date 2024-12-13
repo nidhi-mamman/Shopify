@@ -1,5 +1,4 @@
 import './ForgetPassword.css'
-import forget from '../../assets/forget.png'
 import { Link } from 'react-router-dom'
 
 const ForgetPassword = () => {
@@ -12,9 +11,6 @@ const ForgetPassword = () => {
                     <button className='sendotp'><Link to='/resetpass'>Send OTP</Link></button>
                    <Link to='/myAcc' className='text-blue-950'>Sign In</Link>
                 </form>
-            </div>
-            <div className="image-area">
-                <img src={forget} alt=""  />
             </div>
         </div>
     )
