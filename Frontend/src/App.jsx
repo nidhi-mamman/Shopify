@@ -1,5 +1,5 @@
 import './App.css'
-import { BrowserRouter, Routes, Route,Navigate} from 'react-router-dom'
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import Home from './Pages/Home'
 import Men from './Pages/Mens'
 import Women from './Pages/Women'
@@ -13,8 +13,11 @@ import mens_banner from './assets/men-hero.png'
 import women_banner from './assets/women-hero.png'
 import kids_banner from './assets/kids-hero.png'
 import hero from './assets/family-hero.png'
+import Logout from './Pages/Logout.jsx'
 import { ContextProvider } from './Context/ContextProvider.jsx'
 import OrderPlaced from './Pages/OrderPlaced.jsx'
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import MyAccount from './Component/MyAccount/MyAccount.jsx';
 
 function App() {
@@ -36,11 +39,13 @@ function App() {
                 <Route path="/search" element={<SearchResults />} />
                 <Route path="/order" element={<OrderPlaced />} />
                 <Route path="/myAcc" element={<MyAccount />} />
+                <Route path="/logout" element={<Logout />} />
               </Routes>
             </div>
             <Footer />
           </div>
         </ContextProvider>
+        <ToastContainer />
       </BrowserRouter>
     </>
   );

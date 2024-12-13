@@ -6,19 +6,55 @@ import { useNavigate } from "react-router-dom";
 export const shopContext = createContext()
 
 export const ContextProvider = (props) => {
+    const [token, setToken] = useState(localStorage.getItem('user'))
     const [cartItems, setCartItems] = useState({})
     const [allProducts, setAllProducts] = useState([])
     const [mensProducts, setMensProducts] = useState([])
     const [womensProducts, setWomensProducts] = useState([])
     const [kidsProducts, setKidsProducts] = useState([])
+    const [isLoading, setIsLoading] = useState(true)
+    const [user, setUser] = useState(null)
     const [searchResults, setSearchResults] = useState([])
-    const BASE_URL="http://localhost:5000/api"
+    const authToken = `Bearer ${token}`
+    const BASE_URL = "http://localhost:5000/api"
+    const isLoggedin = !!token;
     const navigate = useNavigate()
+
+
+    const userAuthentication = async () => {
+        if (!token) return;
+
+        try {
+            setIsLoading(true)
+            const response = await axios.get(`${BASE_URL}/user`, {
+                headers: {
+                    Authorization: authToken
+                }
+            })
+            if (response.status === 200) {
+                const userdata = response.data.userData
+                setUser(userdata)
+            } else {
+                console.log("Error fetching user data")
+            }
+
+        } catch (error) {
+            console.log(error)
+        } finally {
+            setIsLoading(false)
+        }
+    }
+
+    const LogoutUser = async () => {
+        setToken("")
+        return localStorage.removeItem("user")
+    }
+
 
     const getCartData = (products) => {
         const cart = {};
         products.forEach(product => {
-            cart[product.id] = 0; 
+            cart[product.id] = 0;
         });
         return cart;
     };
@@ -111,15 +147,15 @@ export const ContextProvider = (props) => {
         const results = allProducts
             .flatMap(category => category.category_products)
             .filter(product => regex.test(product.title) || regex.test(product.category || ""));
-    
+
         setSearchResults(results);
         console.log("Search results:", results);
-    
+
         if (results.length > 0) {
             navigate('/search', { replace: true });
-        } 
+        }
     };
-    
+
 
     useEffect(() => {
         getAllData()
@@ -130,6 +166,10 @@ export const ContextProvider = (props) => {
         getWomensProducts()
         getKidsProducts()
     }, [allProducts])
+
+    useEffect(() => {
+        userAuthentication()
+    }, [token])
 
     return (
         <shopContext.Provider value={{
@@ -150,7 +190,16 @@ export const ContextProvider = (props) => {
             removeFromCart,
             getTotalAmount,
             getTotalCartItems,
-            BASE_URL
+            BASE_URL,
+            user,
+            setUser,
+            token,
+            setToken,
+            authToken,
+            isLoggedin,
+            isLoading,
+            setIsLoading,
+            LogoutUser
         }}>
             {props.children}
         </shopContext.Provider>

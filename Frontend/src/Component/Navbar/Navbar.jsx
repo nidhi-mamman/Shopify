@@ -9,7 +9,7 @@ import { IoIosMenu } from "react-icons/io";
 import { RxCross1 } from "react-icons/rx";
 
 const Navbar = () => {
-    const { searchProducts, getTotalCartItems } = useContext(shopContext)
+    const { searchProducts, getTotalCartItems} = useContext(shopContext)
     const [query, setQuery] = useState('')
     const [showSubmenu, setShowSubmenu] = useState(false)
     const [showMobileMenu, setShowMobileMenu] = useState(false)

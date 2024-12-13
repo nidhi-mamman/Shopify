@@ -45,6 +45,13 @@
   z-index: 5;
 }
 
+.secure {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-left: 11rem;
+}
+
 form {
   height: 20rem;
   background-color: #fff;
@@ -196,6 +203,10 @@ button:active {
   .account-txt {
     line-height: 14px;
     display: initial;
+  }
+
+  .secure {
+    margin-left: 0rem!important;
   }
   .container-fluid::before {
     display: none;
